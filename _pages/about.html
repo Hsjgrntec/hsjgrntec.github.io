@@ -1,0 +1,29 @@
+---
+permalink: /about/
+title: "About"
+layout: splash
+header:
+    overlay_color: "#0095a9"
+    overlay_filter: "0.5"
+    overlay_image: /assets/images/unsplash-image-1.jpg
+
+where:
+    - image_path: /assets/images/gallery.jpg
+      title: "於三星鄉內生產"
+      excerpt: '三星蔥是一種四季蔥，因為宜蘭縣三星鄉盛產青蔥，而且種出來的蔥白特別長，蔥肉軟嫩、纖維少，味道特別甘甜而不嗆辣'
+how:
+    - image_path: /assets/images/gallery.jpg
+      title: "使用水耕農法"
+      excerpt: 'わたしたちが使用している品種は「あんじょう」という品種です。「あんじょう」とは、京都弁で「上手に、丁寧に」という意味があります。栽培が難しく、手間のかかる品種ではありますが、その分甘みと柔らかさを兼ね備えた美味しい九条ねぎになる品種です。こと九条ねぎでは、この「あんじょう」に品種を限定して丁寧に栽培しています。'
+---
+<main>
+    <section>
+        {% include feature_row id="where" type="left" %}
+    </section>
+    <section>
+        {% include feature_row id="how" type="right" %}
+    </section>
+    <section>
+        {% include feature_row id="where" type="left" %}
+    </section>
+</main>
