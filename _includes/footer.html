@@ -21,16 +21,19 @@
         {% endunless %}
     </ul>
 </div>
-
-<div class="page_footer-info" style="float: right;font-size: 14px;">
-    <ul>
-        <li>Tel: +886 3 9541369</li>
-        <li>Fax: +886 3 9542637</li>
-        <li>266 宜蘭縣三星鄉人和六路1號</li>
-    </ul>
-</div>
 <div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} <a
-        href="{{ site.copyright_url | default: site.url }}">{{ site.copyright | default: site.title }}</a>. {{
-    site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com"
-        rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/"
-        rel="nofollow">Minimal Mistakes</a>.</div>
+        href="{{ site.copyright_url | default: site.url }}">{{ site.copyright | default: site.title }}</a>All rights
+    reserved.
+</div>
+<div class="page__footer-info">
+    <div class="page__footer-logo">
+        <img src="{{ site.logo | relatvie_url }}" />
+    </div>
+    <div class="page__footer-contact">
+        <ul>
+            <li>Tel: +886 3 9541369</li>
+            <li>Fax: +886 3 9542637</li>
+            <li>266 宜蘭縣三星鄉人和六路1號</li>
+        </ul>
+    </div>
+</div>

@@ -5,11 +5,41 @@ search: false
 
 @charset "utf-8";
 
+// footer bg color
+$footer-background-color: #f3f6f6;
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-.page__hero {
-    &--overlay {
+.landing { // for home page
+    .page__hero--overlay {
         padding: 20em 0 10em;
+        margin-bottom: 0;
+    }
+    .page__footer {
+        margin-top: 0;
+    }
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    color: #bfd9c3 !important; // override
+    .page__footer-info {
+            margin-left: auto;
+            display: inline-flex;
+            flex-wrap: wrap;
+            .page__footer-logo {
+                width:150px;
+                img {
+                    width: 150px;
+                }
+            }
+            .page__footer-contact {
+                font-size: $type-size-7;
+                ul {
+                    list-style-type: none;
+                }
+            }
     }
 }

@@ -1,5 +1,5 @@
 main:
-  - title: "About"
+  - title: "關於"
     url: /about/
-  - title: "Contact Form"
+  - title: "聯絡我們"
     url: /contact
