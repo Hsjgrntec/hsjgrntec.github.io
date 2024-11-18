@@ -1,0 +1,47 @@
+---
+---
+<!doctype html>
+{% include copyright.html %}
+<html lang="{{ site.locale | replace: " _", "-" | default: "en" }}" class="no-js">
+
+<head>
+    {% include head.html %}
+    {% include head/custom.html %}
+</head>
+
+<body
+    class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}"
+    dir="{% if site.rtl %}rtl{% else %}ltr{% endif %}">
+    {% if page.layout == 'landing' %}
+        {% capture landing_img_path %}{{ page.landing.landing_image | relative_url }}{% endcapture %}
+    <div class="landing--container" style="{% if landing_img_path %}background-image: url('{{ landing_img_path }}');{% endif %} background-size: cover;">
+    {% endif %}
+    {% include_cached skip-links.html %}
+    {% assign current_url = page.url %}
+    {% include_cached masthead.html current_url = current_url %}
+
+    <div class="initial-content">
+        {{ content }}
+        {% include after-content.html %}
+    </div>
+    {% if page.layout == 'landing' %}
+    </div>
+    {% endif %}
+
+    {% if site.search == true %}
+    <div class="search-content">
+        {% include_cached search/search_form.html %}
+    </div>
+    {% endif %}
+
+    <div id="footer" class="page__footer">
+        <footer>
+            {% include footer/custom.html %}
+            {% include_cached footer.html %}
+        </footer>
+    </div>
+
+    {% include scripts.html %}
+</body>
+
+</html>

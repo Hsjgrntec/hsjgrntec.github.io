@@ -1,0 +1,58 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+@charset "utf-8";
+
+// footer bg color
+$footer-background-color: #f3f6f6;
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+.landing--container { // for home page
+    height: 100vh;
+    background-position: center bottom 0px;
+    background-repeat: no-repeat;
+    .page__ {
+        &hero--overlay {
+            margin-bottom: 0;
+        }
+        &title{
+            //writing-mode: vertical-lr;
+        }
+        &footer {
+            margin-top: 0;
+        }
+    }
+    .masthead {
+        border-bottom: none;
+        .greedy-nav {
+            background-color: rgba(0,0,0,0)
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    color: #bfd9c3 !important; // override
+    .page__footer-info {
+            margin-left: auto;
+            display: inline-flex;
+            flex-wrap: wrap;
+            .page__footer-logo {
+                width:150px;
+                img {
+                    width: 150px;
+                }
+            }
+            .page__footer-contact {
+                font-size: $type-size-7;
+                ul {
+                    list-style-type: none;
+                }
+            }
+    }
+}
