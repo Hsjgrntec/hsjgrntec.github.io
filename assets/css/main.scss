@@ -11,6 +11,23 @@ $footer-background-color: #f3f6f6;
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
+.greedy-nav {
+    .visible-links {
+            li {
+                padding: 0.2em;
+                box-sizing: border-box;
+                &:hover {
+                    background-color: rgba(#000, 0.2);
+                    border-radius: 5px;
+                    transition: $global-transition;
+                }
+            }
+            a::before { // remove transition effect
+                height: 0px;
+            }
+    }
+}
+
 .landing--container { // for home page
     height: 100vh;
     background-position: center bottom 0px;
@@ -18,6 +35,9 @@ $footer-background-color: #f3f6f6;
     .page__ {
         &hero--overlay {
             margin-bottom: 0;
+            .wrapper {
+                direction: rtl;
+            }
         }
         &title{
             //writing-mode: vertical-lr;
