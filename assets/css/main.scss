@@ -28,6 +28,13 @@ $footer-background-color: #f3f6f6;
     }
 }
 
+// alignment
+.feature__item--right {
+    p {
+        text-align: justify;
+    }
+}
+
 .landing--container { // for home page
     height: 100vh;
     background-position: center bottom 0px;
@@ -52,6 +59,16 @@ $footer-background-color: #f3f6f6;
             background-color: rgba(0,0,0,0)
         }
     }
+}
+
+.nav-btns {
+    padding: 15px;
+    margin: 0px auto;
+    display: flex;
+    gap: 0.2em;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 footer {
